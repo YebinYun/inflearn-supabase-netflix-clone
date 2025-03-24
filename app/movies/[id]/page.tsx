@@ -1,7 +1,7 @@
 import { getMovie } from "actions/movieActions";
 import UI from "./ui";
 
-export async function generateMetaData({ params, searchParams }) {
+export async function generateMetadata({ params, searchParams }) {
   const movie = await getMovie(params.id);
 
   return {
@@ -18,7 +18,7 @@ export default async function MovieDetail({ params }) {
 
   return (
     <main className="py-16 flex items-center bg-blue-50 w-full absolute top-0 bottom-0 left-0 right-0">
-      {movie ? <UI movie={movie} /> : <div>Movie does not exist</div>}
+      {movie ? <UI movie={movie} /> : <div>Movie does not exists</div>}
     </main>
   );
 }
